@@ -5,6 +5,7 @@ import LoginForm from "./Components/loginForm";
 import NavBar from "./Components/navbar";
 import Home from "./Components/home";
 import "./App.css";
+import "./css/styles.css"
 
 class App extends Component {
   state = {};

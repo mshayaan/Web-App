@@ -96,6 +96,93 @@ class Home extends Component {
 
 
           </section>
+          <section class="colored-section" id="press">
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo"/>>
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo"/>>
+    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo"/>>
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo"/>>
+
+  </section>
+
+  <section class="white-section" id="pricing">
+
+<h2 class="section-heading">A Plan for Every Dog's Needs</h2>
+<p>Simple and affordable price plans for your and your dog.</p>
+
+<div class="row">
+
+  <div class="pricing-column col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Chihuahua</h3>
+      </div>
+      <div class="card-body">
+        <h2 class="price-text">Free</h2>
+        <p>5 Matches Per Day</p>
+        <p>10 Messages Per Day</p>
+        <p>Unlimited App Usage</p>
+        <button class="btn btn-lg btn-block btn-outline-dark" type="button">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-column col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Labrador</h3>
+      </div>
+      <div class="card-body">
+        <h2 class="price-text">$49 / mo</h2>
+        <p>Unlimited Matches</p>
+        <p>Unlimited Messages</p>
+        <p>Unlimited App Usage</p>
+        <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-column col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <h3>Mastiff</h3>
+      </div>
+      <div class="card-body">
+        <h2 class="price-text">$99 / mo</h2>
+        <p>Pirority Listing</p>
+        <p>Unlimited Matches</p>
+        <p>Unlimited Messages</p>
+        <p>Unlimited App Usage</p>
+        <button class="btn btn-lg btn-block btn-dark" type="button">Sign Up</button>
+
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+
+</section>
+
+<section class="colored-section" id="cta">
+
+    <div class="container-fluid">
+
+      <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
+      <button class="download-button btn btn-lg btn-dark" type="button"><i class="fab fa-apple"></i> Download</button>
+      <button class="download-button btn btn-lg brn-light" type="button"><i class="fab fa-google-play"></i> Download</button>
+    </div>
+  </section>
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>© Copyright 2018 TinDog</p>
+    </div>
+  </footer>
 
 
       </div>

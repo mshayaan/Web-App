@@ -82,7 +82,7 @@ class Home extends Component {
         <div class="carousel-item active container-fluid">
           <h2 class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h2>
           <img class="testimonial-image" src={dogimage} alt="dog-profile"/>
-          <em>Shahzaib, New York</em>
+          <em>Lorem, New York</em>
         </div>
         <div class="carousel-item container-fluid">
           <h2 class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h2>

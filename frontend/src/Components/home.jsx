@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Iphone from "../images/iphone6.png"
 import dogimage from "../images/dog-img.jpg"
 import ladyimage from "../images/lady-img.jpg"
@@ -18,7 +19,7 @@ class Home extends Component {
           <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-dark">
               <a class="navbar-brand" href="">
-                SafeCity
+                Safe City
               </a>
             </nav>
             <div></div>

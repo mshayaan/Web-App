@@ -1,4 +1,12 @@
 import React, { Component } from "react";
+import Iphone from "../images/iphone6.png"
+import dogimage from "../images/dog-img.jpg"
+import ladyimage from "../images/lady-img.jpg"
+import techcrunch from "../images/TechCrunch.png"
+import tnw from "../images/tnw.png"
+import bizinsider from "../images/bizinsider.png"
+import mashable from "../images/mashable.png"
+
 
 class Home extends Component {
   state = {};
@@ -21,8 +29,7 @@ class Home extends Component {
             <div class="row">
               <div class="col-lg-6">
                 <h1 class="big-heading">
-                  Meet new and interesting dogs nearby.
-                </h1>
+                Lorem ipsum dolor sit amet</h1>
                 <button
                   type="button"
                   class="btn btn-dark btn-lg download-button"
@@ -40,10 +47,10 @@ class Home extends Component {
               <div class="col-lg-6">
                 <img
                   class="title-image"
-                  src="images/iphone6.png"
+                  src={Iphone}
                   alt="iphone-mockup"
                 />
-                >
+                
               </div>
             </div>
           </div>
@@ -77,12 +84,12 @@ class Home extends Component {
       <div class="carousel-inner">
         <div class="carousel-item active container-fluid">
           <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-          <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile"/>>
+          <img class="testimonial-image" src={dogimage} alt="dog-profile"/>>
           <em>Pebbles, New York</em>
         </div>
         <div class="carousel-item container-fluid">
           <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
-          <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile"/>>
+          <img class="testimonial-image" src={ladyimage} alt="lady-profile"/>>
           <em>Beverly, Illinois</em>
         </div>
       </div>
@@ -97,10 +104,10 @@ class Home extends Component {
 
           </section>
           <section class="colored-section" id="press">
-    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo"/>>
-    <img class="press-logo" src="images/tnw.png" alt="tnw-logo"/>>
-    <img class="press-logo" src="images/bizinsider.png" alt="biz-insider-logo"/>>
-    <img class="press-logo" src="images/mashable.png" alt="mashable-logo"/>>
+    <img class="press-logo" src={techcrunch} alt="tc-logo"/>>
+    <img class="press-logo" src={tnw} alt="tnw-logo"/>>
+    <img class="press-logo" src={bizinsider} alt="biz-insider-logo"/>>
+    <img class="press-logo" src={mashable} alt="mashable-logo"/>>
 
   </section>
 

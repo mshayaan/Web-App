@@ -13,10 +13,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div class="jumbotron text-center">
-          <h1>SafeCity App Home Page</h1>
-          <p> </p>
-        </div>
+        
         <section class="colored-section" id="title">
           <div class="container-fluid">
             <nav class="navbar navbar-expand-lg navbar-dark">
@@ -62,19 +59,19 @@ class Home extends Component {
               <div class="feature-box col-lg-4">
                 <i class="icon fas fa-check-circle fa-4x"></i>
                 <h3 class="feature-title">Easy to use.</h3>
-                <p>So easy to use, even your dog could do it.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
               </div>
 
               <div class="feature-box col-lg-4">
                 <i class="icon fas fa-bullseye fa-4x"></i>
                 <h3 class="feature-title">Elite Clientele</h3>
-                <p>We have all the dogs, the greatest dogs.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
               </div>
 
               <div class="feature-box col-lg-4">
                 <i class="icon fas fa-heart fa-4x"></i>
                 <h3 class="feature-title">Guaranteed to work.</h3>
-                <p>Find the love of your dog's life or your money back.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
               </div>
             </div>
           </div>
@@ -83,14 +80,14 @@ class Home extends Component {
         <div id="testimonial-carousel" class="carousel slide" data-ride="false">
       <div class="carousel-inner">
         <div class="carousel-item active container-fluid">
-          <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
-          <img class="testimonial-image" src={dogimage} alt="dog-profile"/>>
-          <em>Pebbles, New York</em>
+          <h2 class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h2>
+          <img class="testimonial-image" src={dogimage} alt="dog-profile"/>
+          <em>Shahzaib, New York</em>
         </div>
         <div class="carousel-item container-fluid">
-          <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
-          <img class="testimonial-image" src={ladyimage} alt="lady-profile"/>>
-          <em>Beverly, Illinois</em>
+          <h2 class="testimonial-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h2>
+          <img class="testimonial-image" src={ladyimage} alt="lady-profile"/>
+          <em>Shayaan, Illinois</em>
         </div>
       </div>
       <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
@@ -104,24 +101,24 @@ class Home extends Component {
 
           </section>
           <section class="colored-section" id="press">
-    <img class="press-logo" src={techcrunch} alt="tc-logo"/>>
-    <img class="press-logo" src={tnw} alt="tnw-logo"/>>
-    <img class="press-logo" src={bizinsider} alt="biz-insider-logo"/>>
-    <img class="press-logo" src={mashable} alt="mashable-logo"/>>
+    <img class="press-logo" src={techcrunch} alt="tc-logo"/>
+    <img class="press-logo" src={tnw} alt="tnw-logo"/>
+    <img class="press-logo" src={bizinsider} alt="biz-insider-logo"/>
+    <img class="press-logo" src={mashable} alt="mashable-logo"/>
 
   </section>
 
   <section class="white-section" id="pricing">
 
-<h2 class="section-heading">A Plan for Every Dog's Needs</h2>
-<p>Simple and affordable price plans for your and your dog.</p>
+<h2 class="section-heading">A Plan for Everyone's Needs</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
 
 <div class="row">
 
   <div class="pricing-column col-lg-4 col-md-6">
     <div class="card">
       <div class="card-header">
-        <h3>Chihuahua</h3>
+        <h3>Card 1</h3>
       </div>
       <div class="card-body">
         <h2 class="price-text">Free</h2>
@@ -136,7 +133,7 @@ class Home extends Component {
   <div class="pricing-column col-lg-4 col-md-6">
     <div class="card">
       <div class="card-header">
-        <h3>Labrador</h3>
+        <h3>Card 2</h3>
       </div>
       <div class="card-body">
         <h2 class="price-text">$49 / mo</h2>
@@ -151,7 +148,7 @@ class Home extends Component {
   <div class="pricing-column col-lg-4">
     <div class="card">
       <div class="card-header">
-        <h3>Mastiff</h3>
+        <h3>Card 3</h3>
       </div>
       <div class="card-body">
         <h2 class="price-text">$99 / mo</h2>
@@ -175,7 +172,7 @@ class Home extends Component {
 
     <div class="container-fluid">
 
-      <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
+      <h3 class="big-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h3>
       <button class="download-button btn btn-lg btn-dark" type="button"><i class="fab fa-apple"></i> Download</button>
       <button class="download-button btn btn-lg brn-light" type="button"><i class="fab fa-google-play"></i> Download</button>
     </div>
@@ -187,7 +184,7 @@ class Home extends Component {
       <i class="social-icon fab fa-twitter"></i>
       <i class="social-icon fab fa-instagram"></i>
       <i class="social-icon fas fa-envelope"></i>
-      <p>© Copyright 2018 TinDog</p>
+      <p>© Copyright 2020 Shayaan</p>
     </div>
   </footer>
 

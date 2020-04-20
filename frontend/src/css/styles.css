@@ -34,7 +34,7 @@ p {
 /* Sections */
 
 .colored-section {
-  background-color: #ff4c68;
+  background-color: #2a7886;
   color: #fff;
 }
 
@@ -70,9 +70,8 @@ p {
 }
 
 /* Title Section */
-
 #title {
-  background-color: #ff4c68;
+  background-color: #6556e7;
   color: #fff;
   text-align: left;
 }
@@ -116,7 +115,8 @@ p {
 /* Testimonial Section */
 
 #testimonials {
-  background-color: #ef8172;
+  background-color: #6556e7
+  ;
 }
 
 .testimonial-text {
@@ -132,8 +132,9 @@ p {
 
 
 #press {
-  background-color: #ef8172;
-  padding-bottom: 3%;
+  background-color: #ffffff;
+  align-items: center;
+  padding-bottom: 1%;
 }
 
 .press-logo {

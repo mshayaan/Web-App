@@ -17,12 +17,9 @@ class App extends Component {
   state = {};
 
   render() {
-    return ( <
-      div >
-      <
-      div className = "content" >
-      <
-      Switch >
+    return ( <div >
+      <div className = "content" >
+      < Switch >
       <
       Route path = "/user/signup"
       component = {
@@ -40,10 +37,7 @@ class App extends Component {
       }
       />
 
-      <
-      /Switch> <
-      /div> <
-      /div>
+      </Switch> </div> </div>
     );
   }
 }

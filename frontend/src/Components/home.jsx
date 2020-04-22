@@ -8,6 +8,9 @@ import tnw from "../images/tnw.png";
 import NavBar from "./navbar";
 import bizinsider from "../images/bizinsider.png";
 import mashable from "../images/mashable.png";
+import "react-fontawesome"
+import FontAwesome from "react-fontawesome";
+
 
 class Home extends Component {
   state = {};
@@ -31,13 +34,13 @@ class Home extends Component {
                   type="button"
                   className="btn btn-dark btn-lg download-button"
                 >
-                  <i className="fab fa-apple"></i> Download
+                  <FontAwesome className="fab fa-apple"></FontAwesome> Download
                 </button>
                 <button
                   type="button"
                   className="btn btn-outline-light btn-lg download-button"
                 >
-                  <i className="fab fa-google-play"></i> Download
+                  <FontAwesome className="fab fa-google-play"></FontAwesome> Download
                 </button>
               </div>
 
@@ -52,7 +55,7 @@ class Home extends Component {
           <div className="container-fluid">
             <div className="row">
               <div className="feature-box col-lg-4">
-                <i className="icon fas fa-check-circle fa-4x"></i>
+                <FontAwesome className="icon fas fa-check-circle fa-4x"></FontAwesome>
                 <h3 className="feature-title">Easy to use.</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -61,7 +64,7 @@ class Home extends Component {
               </div>
 
               <div className="feature-box col-lg-4">
-                <i className="icon fas fa-bullseye fa-4x"></i>
+                <FontAwesome className="icon fas fa-bullseye fa-4x"></FontAwesome>
                 <h3 className="feature-title">Elite Clientele</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -70,7 +73,7 @@ class Home extends Component {
               </div>
 
               <div className="feature-box col-lg-4">
-                <i className="icon fas fa-heart fa-4x"></i>
+                <FontAwesome className="icon fas fa-heart fa-4x"></FontAwesome>
                 <h3 className="feature-title">Guaranteed to work.</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -218,23 +221,23 @@ class Home extends Component {
               className="download-button btn btn-lg btn-dark"
               type="button"
             >
-              <i className="fab fa-apple"></i> Download
+              <FontAwesome className="fab fa-apple"></FontAwesome> Download
             </button>
             <button
               className="download-button btn btn-lg brn-light"
               type="button"
             >
-              <i className="fab fa-google-play"></i> Download
+              <FontAwesome className="fab fa-google-play"></FontAwesome> Download
             </button>
           </div>
         </section>
 
         <footer className="white-section" id="footer">
           <div className="container-fluid">
-            <i className="social-icon fab fa-facebook-f"></i>
-            <i className="social-icon fab fa-twitter"></i>
-            <i className="social-icon fab fa-instagram"></i>
-            <i className="social-icon fas fa-envelope"></i>
+            <FontAwesome className="social-icon fab fa-facebook-f"></FontAwesome>
+            <FontAwesome className="social-icon fab fa-twitter"></FontAwesome>
+            <FontAwesome className="social-icon fab fa-instagram"></FontAwesome>
+            <FontAwesome className="social-icon fas fa-envelope"></FontAwesome>
             <p>© Copyright 2020 Shayaan</p>
           </div>
         </footer>

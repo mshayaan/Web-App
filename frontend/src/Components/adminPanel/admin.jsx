@@ -1,133 +1,141 @@
 import React, { Component } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
+import "react-fontawesome";
+import FontAwesome from "react-fontawesome";
 
 class Admin extends Component {
   state = {};
   render() {
     return (
       <div>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
-          <div class="container">
-            <a href="index.html" class="navbar-brand">
+        <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+          <div className="container">
+            <Link to="index.html" className="navbar-brand">
               Blogen
-            </a>
+            </Link>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               data-toggle="collapse"
               data-target="#navbarCollapse"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <ul class="navbar-nav">
-                <li class="nav-item px-2">
-                  <a href="index.html" class="nav-link active">
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <ul className="navbar-nav">
+                <li className="nav-item px-2">
+                  <Link to="index.html" className="nav-link active">
                     Dashboard
-                  </a>
+                  </Link>
                 </li>
-                <li class="nav-item px-2">
-                  <a href="posts.html" class="nav-link">
+                <li className="nav-item px-2">
+                  <Link to="admin/posts" className="nav-link">
                     Posts
-                  </a>
+                  </Link>
                 </li>
-                <li class="nav-item px-2">
-                  <a href="categories.html" class="nav-link">
+                <li className="nav-item px-2">
+                  <Link to="/admin/categories" className="nav-link">
                     Categories
-                  </a>
+                  </Link>
                 </li>
-                <li class="nav-item px-2">
-                  <a href="users.html" class="nav-link">
+                <li className="nav-item px-2">
+                  <Link to="admin/users" className="nav-link">
                     Users
-                  </a>
+                  </Link>
                 </li>
               </ul>
 
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown mr-3">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item dropdown mr-3">
+                  <Link
+                    to="#"
+                    className="nav-link dropdown-toggle"
                     data-toggle="dropdown"
                   >
-                    <i class="fas fa-user"></i> Welcome Brad
-                  </a>
-                  <div class="dropdown-menu">
-                    <a href="profile.html" class="dropdown-item">
-                      <i class="fas fa-user-circle"></i> Profile
-                    </a>
-                    <a href="settings.html" class="dropdown-item">
-                      <i class="fas fa-cog"></i> Settings
-                    </a>
+                    <FontAwesome className="fas fa-user"></FontAwesome> Welcome
+                    Brad
+                  </Link>
+                  <div className="dropdown-menu">
+                    <Link to="profile.html" className="dropdown-item">
+                      <FontAwesome className="fas fa-user-circle"></FontAwesome>{" "}
+                      Profile
+                    </Link>
+                    <Link to="settings.html" className="dropdown-item">
+                      <FontAwesome className="fas fa-cog"></FontAwesome>{" "}
+                      Settings
+                    </Link>
                   </div>
                 </li>
-                <li class="nav-item">
-                  <a href="login.html" class="nav-link">
-                    <i class="fas fa-user-times"></i> Logout
-                  </a>
+                <li className="nav-item">
+                  <Link to="login.html" className="nav-link">
+                    <FontAwesome className="fas fa-user-times"></FontAwesome>{" "}
+                    Logout
+                  </Link>
                 </li>
               </ul>
             </div>
           </div>
         </nav>
 
-        <header id="main-header" class="py-2 bg-primary text-white">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
+        <header id="main-header" className="py-2 bg-primary text-white">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-6">
                 <h1>
-                  <i class="fas fa-cog"></i> Dashboard
+                  <FontAwesome className="fas fa-cog"></FontAwesome> Dashboard
                 </h1>
               </div>
             </div>
           </div>
         </header>
-        <section id="actions" class="py-4 mb-4 bg-light">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <a
-                  href="#"
-                  class="btn btn-primary btn-block"
+        <section id="actions" className="py-4 mb-4 bg-light">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-3">
+                <Link
+                  to="#"
+                  className="btn btn-primary btn-block"
                   data-toggle="modal"
                   data-target="#addPostModal"
                 >
-                  <i class="fas fa-plus"></i> Add Post
-                </a>
+                  <FontAwesome className="fas fa-plus"></FontAwesome> Add Post
+                </Link>
               </div>
-              <div class="col-md-3">
-                <a
-                  href="#"
-                  class="btn btn-success btn-block"
+              <div className="col-md-3">
+                <Link
+                  to="#"
+                  className="btn btn-success btn-block"
                   data-toggle="modal"
                   data-target="#addCategoryModal"
                 >
-                  <i class="fas fa-plus"></i> Add Category
-                </a>
+                  <FontAwesome className="fas fa-plus"></FontAwesome> Add
+                  Category
+                </Link>
               </div>
-              <div class="col-md-3">
-                <a
-                  href="#"
-                  class="btn btn-warning btn-block"
+              <div className="col-md-3">
+                <Link
+                  to="#"
+                  className="btn btn-warning btn-block"
                   data-toggle="modal"
                   data-target="#addUserModal"
                 >
-                  <i class="fas fa-plus"></i> Add User
-                </a>
+                  <FontAwesome className="fas fa-plus"></FontAwesome> Add User
+                </Link>
               </div>
             </div>
           </div>
         </section>
 
         <section id="posts">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-9">
-                <div class="card">
-                  <div class="card-header">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-9">
+                <div className="card">
+                  <div className="card-header">
                     <h4>Latest Posts</h4>
                   </div>
-                  <table class="table table-striped">
-                    <thead class="thead-dark">
+                  <table className="table table-striped">
+                    <thead className="thead-dark">
                       <tr>
                         <th>#</th>
                         <th>Title</th>
@@ -143,9 +151,10 @@ class Admin extends Component {
                         <td>Web Development</td>
                         <td>May 10 2018</td>
                         <td>
-                          <a href="details.html" class="btn btn-secondary">
-                            <i class="fas fa-angle-double-right"></i> Details
-                          </a>
+                          <Link to="details.html" className="btn btn-secondary">
+                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
+                            Details
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -154,9 +163,10 @@ class Admin extends Component {
                         <td>Tech Gadgets</td>
                         <td>May 11 2018</td>
                         <td>
-                          <a href="details.html" class="btn btn-secondary">
-                            <i class="fas fa-angle-double-right"></i> Details
-                          </a>
+                          <Link to="details.html" className="btn btn-secondary">
+                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
+                            Details
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -165,9 +175,10 @@ class Admin extends Component {
                         <td>Web Development</td>
                         <td>May 13 2018</td>
                         <td>
-                          <a href="details.html" class="btn btn-secondary">
-                            <i class="fas fa-angle-double-right"></i> Details
-                          </a>
+                          <Link to="details.html" className="btn btn-secondary">
+                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
+                            Details
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -176,9 +187,10 @@ class Admin extends Component {
                         <td>Business</td>
                         <td>May 15 2018</td>
                         <td>
-                          <a href="details.html" class="btn btn-secondary">
-                            <i class="fas fa-angle-double-right"></i> Details
-                          </a>
+                          <Link to="details.html" className="btn btn-secondary">
+                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
+                            Details
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -187,9 +199,10 @@ class Admin extends Component {
                         <td>Web Development</td>
                         <td>May 17 2018</td>
                         <td>
-                          <a href="details.html" class="btn btn-secondary">
-                            <i class="fas fa-angle-double-right"></i> Details
-                          </a>
+                          <Link to="details.html" className="btn btn-secondary">
+                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
+                            Details
+                          </Link>
                         </td>
                       </tr>
                       <tr>
@@ -198,52 +211,60 @@ class Admin extends Component {
                         <td>Health & Wellness</td>
                         <td>May 20 2018</td>
                         <td>
-                          <a href="details.html" class="btn btn-secondary">
-                            <i class="fas fa-angle-double-right"></i> Details
-                          </a>
+                          <Link to="details.html" className="btn btn-secondary">
+                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
+                            Details
+                          </Link>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
-              <div class="col-md-3">
-                <div class="card text-center bg-primary text-white mb-3">
-                  <div class="card-body">
+              <div className="col-md-3">
+                <div className="card text-center bg-primary text-white mb-3">
+                  <div className="card-body">
                     <h3>Posts</h3>
-                    <h4 class="display-4">
-                      <i class="fas fa-pencil-alt"></i> 6
+                    <h4 className="display-4">
+                      <FontAwesome className="fas fa-pencil-alt"></FontAwesome>{" "}
+                      6
                     </h4>
-                    <a href="posts.html" class="btn btn-outline-light btn-sm">
-                      View
-                    </a>
-                  </div>
-                </div>
-
-                <div class="card text-center bg-success text-white mb-3">
-                  <div class="card-body">
-                    <h3>Categories</h3>
-                    <h4 class="display-4">
-                      <i class="fas fa-folder"></i> 4
-                    </h4>
-                    <a
-                      href="categories.html"
-                      class="btn btn-outline-light btn-sm"
+                    <Link
+                      to="posts.html"
+                      className="btn btn-outline-light btn-sm"
                     >
                       View
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
-                <div class="card text-center bg-warning text-white mb-3">
-                  <div class="card-body">
-                    <h3>Users</h3>
-                    <h4 class="display-4">
-                      <i class="fas fa-users"></i> 4
+                <div className="card text-center bg-success text-white mb-3">
+                  <div className="card-body">
+                    <h3>Categories</h3>
+                    <h4 className="display-4">
+                      <FontAwesome className="fas fa-folder"></FontAwesome> 4
                     </h4>
-                    <a href="users.html" class="btn btn-outline-light btn-sm">
+                    <Link
+                      to="categories.html"
+                      className="btn btn-outline-light btn-sm"
+                    >
                       View
-                    </a>
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="card text-center bg-warning text-white mb-3">
+                  <div className="card-body">
+                    <h3>Users</h3>
+                    <h4 className="display-4">
+                      <FontAwesome className="fas fa-users"></FontAwesome> 4
+                    </h4>
+                    <Link
+                      to="users.html"
+                      className="btn btn-outline-light btn-sm"
+                    >
+                      View
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -251,11 +272,11 @@ class Admin extends Component {
           </div>
         </section>
 
-        <footer id="main-footer" class="bg-dark text-white mt-5 p-5">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <p class="lead text-center">
+        <footer id="main-footer" className="bg-dark text-white mt-5 p-5">
+          <div className="container">
+            <div className="row">
+              <div className="col">
+                <p className="lead text-center">
                   Copyright &copy;
                   <span id="year"></span>
                   Blogen
@@ -264,57 +285,123 @@ class Admin extends Component {
             </div>
           </div>
         </footer>
+        {/* //Modals here */}
+        {/* //Post Modals */}
 
-        {/* Post modals here */}
-        <div class="modal fade" id="addPostModal">
-          <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-              <div class="modal-header bg-primary text-white">
-                <h5 class="modal-title">Add Post</h5>
-                <button class="close" data-dismiss="modal">
+        <div className="modal fade" id="addPostModal">
+          <div className="modal-dialog modal-lg">
+            <div className="modal-content">
+              <div className="modal-header bg-primary text-white">
+                <h5 className="modal-title">Add Post</h5>
+                <button className="close" data-dismiss="modal">
                   <span>&times;</span>
                 </button>
               </div>
-              <div class="modal-body">
+              <div className="modal-body">
                 <form>
-                  <div class="form-group">
+                  <div className="form-group">
                     <label for="title">Title</label>
-                    <input type="text" class="form-control" />
+                    <input type="text" className="form-control" />
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <label for="category">Category</label>
-                    <select class="form-control">
+                    <select className="form-control">
                       <option value="">Web Development</option>
                       <option value="">Tech Gadgets</option>
                       <option value="">Business</option>
                       <option value="">Health & Wellness</option>
                     </select>
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <label for="image">Upload Image</label>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="image" />
-                      <label for="image" class="custom-file-label">
+                    <div className="custom-file">
+                      <input type="file" className="custom-file-input" id="image" />
+                      <label for="image" className="custom-file-label">
                         Choose File
                       </label>
                     </div>
-                    <small class="form-text text-muted">Max Size 3mb</small>
+                    <small className="form-text text-muted">Max Size 3mb</small>
                   </div>
-                  <div class="form-group">
+                  <div className="form-group">
                     <label for="body">Body</label>
-                    <textarea name="editor1" class="form-control"></textarea>
+                    <textarea name="editor1" className="form-control"></textarea>
                   </div>
                 </form>
               </div>
+              <div className="modal-footer">
+                <button className="btn btn-primary" data-dismiss="modal">
+                  Save Changes
+                </button>
+              </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button class="btn btn-primary" data-dismiss="modal">
-              Save Changes
-            </button>
-          </div>
+        </div>
 
-          {/* Category Modal */}
+        {/* Category Modal */}
+
+        <div className="modal fade" id="addCategoryModal">
+          <div className="modal-dialog modal-lg">
+            <div className="modal-content">
+              <div className="modal-header bg-success text-white">
+                <h5 className="modal-title">Add Category</h5>
+                <button className="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <form>
+                  <div className="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" className="form-control" />
+                  </div>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button className="btn btn-success" data-dismiss="modal">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <!-- ADD USER MODAL --> */}
+        <div className="modal fade" id="addUserModal">
+          <div className="modal-dialog modal-lg">
+            <div className="modal-content">
+              <div className="modal-header bg-warning text-white">
+                <h5 className="modal-title">Add User</h5>
+                <button className="close" data-dismiss="modal">
+                  <span>&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">
+                <form>
+                  <div className="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" className="form-control" />
+                  </div>
+                  <div className="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" className="form-control" />
+                  </div>
+                  <div className="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" className="form-control" />
+                  </div>
+                  <div className="form-group">
+                    <label for="password2">Confirm Password</label>
+                    <input type="password" className="form-control" />
+                  </div>
+                </form>
+              </div>
+              <div className="modal-footer">
+                <button className="btn btn-warning" data-dismiss="modal">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import Joi from "joi-browser";
+import Form from "./common/form";
 import Input from "./common/input";
+import NavBar from "./navbar";
 import axios from "axios";
 
 const apiEndpoint = "http://localhost:3000/api/signup";
-class LoginForm extends Component {
+class LoginForm extends Form {
   state = {
-    account: {
+    data: {
       firstName: "",
       middleName: "",
       lastName: "",
@@ -16,29 +19,25 @@ class LoginForm extends Component {
     errors: {},
   };
 
-  validate = () => {
-    const errors = {};
-
-    const { account } = this.state;
-    if (account.firstName.trim() === "")
-      errors.firstName = "First Name is required.";
-    if (account.lastName.trim() === "")
-      errors.lastName = "Last Name is required.";
-
-    return Object.keys(errors).length === 0 ? null : errors;
+  schema = {
+    firstName: Joi.string().min(3).required().label("First Name"),
+    middleName: Joi.string().required().label("Middle Name"),
+    lastName: Joi.string().min(3).required().label("Last Name"),
+    email: Joi.string()
+      .email({
+        minDomainAtoms: 2,
+      })
+      .label("Email"),
+    mobileNumber: Joi.string()
+      .regex(/^[0-9]{3,30}$/)
+      .min(11)
+      .max(11)
+      .label("Mobile Number"),
+    password: Joi.string()
+      .regex(/^[a-zA-Z0-9]{3,30}$/)
+      .label("Password"),
   };
 
-  validateProperty = ({ name, value }) => {
-    if (name === "firstName") {
-      if (value.trim() === "") return "Username is required.";
-      // ...
-    }
-
-    if (name === "email") {
-      if (value.trim() === "") return "Email is required.";
-      // ...
-    }
-  };
   // firstName = React.createRef();
   // middleName = React.createRef();
   // lastName = React.createRef();
@@ -46,20 +45,7 @@ class LoginForm extends Component {
   // mobileNumber = React.createRef();
   // password = React.createRef();
 
-  handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const errors = this.validate();
-    console.log(errors);
-    this.setState({ errors });
-    if (errors) return;
-    // const firstName = this.firstName.current.value;
-    // const middleName = this.middleName.current.value;
-    // const lastName = this.lastName.current.value;
-    // const email = this.email.current.value;
-    // const mobileNumber = this.mobileNumber.current.value;
-    // const password = this.password.current.value;
-
+  doSubmit = () => {
     // //call the server
     // const obj = {
     //   first_name: firstName,
@@ -70,13 +56,10 @@ class LoginForm extends Component {
     //   password: password,
     //   confirm_password: password,
     // };
-
     // const { data: user } = await axios.post(apiEndpoint, obj);
     // console.log("submitted");
     // console.log(user);
-
     //------------------------------
-
     // console.log(`first name is ${firstName}`);
     // console.log(`middle name is ${middleName}`);
     // console.log(`last name name is ${lastName}`);
@@ -85,66 +68,60 @@ class LoginForm extends Component {
     // console.log(`password is ${password}`);
   };
 
-  handleChange = ({ currentTarget: input }) => {
-    const errors = { ...this.state.errors };
-    const errorMessage = this.validateProperty(input);
-    if (errorMessage) errors[input.name] = errorMessage;
-    else delete errors[input.name];
-
-    const account = { ...this.state.account };
-    account[input.name] = input.value;
-    this.setState({ account, errors });
-  };
-
   render() {
-    const { account, errors } = this.state;
+    const { data, errors } = this.state;
 
     return (
       <div>
+        <NavBar />
         <h1> Signup </h1>{" "}
         <form onSubmit={this.handleSubmit}>
           <Input
             name="firstName"
-            value={account.firstName}
+            value={data.firstName}
             label="First Name"
             onChange={this.handleChange}
             error={errors.firstName}
           />
           <Input
-            name="middelName"
-            value={account.middelName}
+            name="middleName"
+            value={data.middelName}
             label="Middle Name"
             onChange={this.handleChange}
           />
           <Input
             name="lastName"
-            value={account.lastName}
+            value={data.lastName}
             label="Last Name"
             onChange={this.handleChange}
             error={errors.lastName}
           />
           <Input
             name="email"
-            value={account.email}
+            value={data.email}
             label="Email"
             onChange={this.handleChange}
-            // error={errors.email}
+            error={errors.email}
           />
           <Input
             name="mobileNumber"
-            value={account.mobileNumber}
+            value={data.mobileNumber}
             label="Mobile Number"
             onChange={this.handleChange}
-            // error={errors.mobileNumber}
+            error={errors.mobileNumber}
           />
           <Input
             name="password"
-            value={account.password}
+            value={data.password}
             label="Password"
             onChange={this.handleChange}
-            // error={errors.password}
+            error={errors.password}
           />
-          <button type="submit" className="btn btn-primary">
+          <button
+            disabled={this.validate()}
+            type="submit"
+            className="btn btn-primary"
+          >
             Login{" "}
           </button>{" "}
         </form>{" "}

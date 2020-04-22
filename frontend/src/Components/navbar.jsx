@@ -5,12 +5,12 @@ class NavBar extends Component {
   state = {};
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <Link className="navbar-brand" to="#">
           SafeCity
-        </a>
+        </Link>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
@@ -18,46 +18,46 @@ class NavBar extends Component {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/">
-                Home <span class="sr-only">(current)</span>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav mr-auto">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/">
+                Home <span className="sr-only">(current)</span>
               </Link>
             </li>
 
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
+            <li className="nav-item active">
+              <Link className="nav-link" to="#">
                 About Us
-              </a>
+              </Link>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
+            <li className="nav-item active">
+              <Link className="nav-link" to="#">
                 Report a Crime
-              </a>
+              </Link>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
+            <li className="nav-item active">
+              <Link className="nav-link" to="#">
                 View Safe Zones
-              </a>
+              </Link>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
+            <li className="nav-item active">
+              <Link className="nav-link" to="#">
                 City News
-              </a>
+              </Link>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="#">
+            <li className="nav-item active">
+              <Link className="nav-link" to="#">
                 Lost and Found
-              </a>
+              </Link>
             </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
+            <li className="nav-item dropdown">
+              <Link
+                className="nav-link dropdown-toggle"
+                to="#"
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
@@ -65,34 +65,34 @@ class NavBar extends Component {
                 aria-expanded="false"
               >
                 Dropdown
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">
+              </Link>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <Link className="dropdown-item" to="#">
                   Action
-                </a>
-                <a class="dropdown-item" href="#">
+                </Link>
+                <Link className="dropdown-item" to="#">
                   Another action
-                </a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">
+                </Link>
+                <div className="dropdown-divider"></div>
+                <Link className="dropdown-item" to="#">
                   Something else here
-                </a>
+                </Link>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#">
+            <li className="nav-item">
+              <Link className="nav-link disabled" to="#">
                 Disabled
-              </a>
+              </Link>
             </li>
           </ul>
-          <ul class="navbar-nav justify-content-end ">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/signup">
+          <ul className="navbar-nav justify-content-end ">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/user/signup">
                 Login/SignUp
               </Link>
             </li>
-            {/* <li class="nav-item active">
-              <a class="nav-link" href="/signup">
+            {/* <li className="nav-item active">
+              <a className="nav-link" to="/signup">
                 Login/SignUp
               </a>
             </li> */}

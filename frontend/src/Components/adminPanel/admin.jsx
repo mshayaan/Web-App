@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "react-fontawesome";
 import FontAwesome from "react-fontawesome";
+import Modal from 'react-modal';
+
 
 class Admin extends Component {
   state = {};
@@ -14,13 +16,13 @@ class Admin extends Component {
             <Link to="index.html" className="navbar-brand">
               Blogen
             </Link>
-            <button
+            <Modal
               className="navbar-toggler"
               data-toggle="collapse"
               data-target="#navbarCollapse"
             >
               <span className="navbar-toggler-icon"></span>
-            </button>
+            </Modal>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav">
                 <li className="nav-item px-2">

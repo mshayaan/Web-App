@@ -7,7 +7,7 @@ import LoginForm from "./Components/signinForm";
 import Logout from "./Components/logout";
 import "react-fontawesome";
 import NavBar from "./Components/navbar";
-import Home from "./Components/home";
+import Home from "./Components/home.jsx";
 import Admin from "./Components/adminPanel/admin";
 import "./App.css";
 import "./css/styles.css";

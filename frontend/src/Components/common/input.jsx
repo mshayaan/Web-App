@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 //We have created a functional component that has no state (a controlled component)
 
-const Input = ({ name, label, value, onChange }) => {
+const Input = ({ name, label, value, error, onChange, type }) => {
   return (
     <div className="form-group">
       <label htmlFor={name}> {label} </label>{" "}
@@ -10,12 +10,12 @@ const Input = ({ name, label, value, onChange }) => {
         value={value}
         onChange={onChange}
         name={name}
-        type="text"
+        type={type}
         className="form-control"
         id={name}
       />
+      {error && <div className="alert alert-danger">{error}</div>}
     </div>
   );
 };
-
 export default Input;

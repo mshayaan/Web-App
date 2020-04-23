@@ -6,7 +6,10 @@ import {
   Route,
   Switch
 } from "react-router-dom";
-import LoginForm from "./Components/loginForm";
+
+import RegistrationForm from "./Components/signupForm";
+import LoginForm from "./Components/signinForm";
+import Logout from "./Components/logout";
 import NavBar from "./Components/navbar";
 import Home from "./Components/home";
 import Admin from "./Components/adminPanel/admin";
@@ -16,36 +19,50 @@ import "./css/styles.css";
 class App extends Component {
   state = {};
 
+
+
   render() {
     return ( <
-      div >
-      <
-      div className = "content" >
-      <
-      Switch >
-      <
-      Route path = "/user/signup"
-      component = {
-        LoginForm
-      }
-      /> <
-      Route path = "/admin"
-      component = {
-        Admin
-      }
-      /> <
-      Route path = "/"
-      component = {
-        Home
-      }
-      />
-
-      <
-      /Switch> <
-      /div> <
-      /div>
-    );
-  }
+        div >
+        <
+        div className = "content" >
+        <
+        Switch >
+        <
+        Route path = "/user/signup"
+        component = {
+          RegistrationForm
+        }
+        />{" "} <
+        Route path = "/user/signin"
+        component = {
+          LoginForm
+        }
+        />{" "} {
+        " "
+      } <
+      Route path = "/user/logout"
+    component = {
+      Logout
+    }
+    />{" "}  <
+    Route path = "/admin"
+    component = {
+      Admin
+    }
+    />{" "} <
+    Route path = "/"
+    component = {
+      Home
+    }
+    /> < /
+    Switch > {
+        " "
+      } <
+      /div>{" "} < /
+    div >
+  );
+}
 }
 
 export default App;

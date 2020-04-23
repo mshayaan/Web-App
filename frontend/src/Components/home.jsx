@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import jwtDecode from "jwt-decode";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Iphone from "../images/iphone6.png";
 import dogimage from "../images/dog-img.jpg";
@@ -11,10 +12,19 @@ import mashable from "../images/mashable.png";
 
 class Home extends Component {
   state = {};
+  componentDidMount() {
+    try {
+      const jwt = localStorage.getItem("token");
+      const user = jwtDecode(jwt);
+      this.setState({
+        user,
+      });
+    } catch (ex) {}
+  }
   render() {
     return (
       <div>
-        <NavBar />
+        <NavBar user={this.state.user} />
         <section className="colored-section" id="title">
           <div className="container-fluid">
             <nav className="navbar navbar-expand-lg navbar-dark">

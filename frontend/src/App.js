@@ -15,6 +15,7 @@ import Posts from "./Components/adminPanel/posts";
 import categories from "./Components/adminPanel/categories";
 import Users from "./Components/adminPanel/users";
 
+// Note for Shayan: App.js is upto date, my code an your code was merged successfully
 class App extends Component {
   state = {};
 

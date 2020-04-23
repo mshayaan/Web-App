@@ -1,5 +1,5 @@
 const config = require("config");
-const users = require("./routes/users");
+const register = require("./routes/register");
 const express = require("express");
 const Joi = require("joi");
 const mongoose = require("mongoose");
@@ -28,7 +28,7 @@ mongoose
     .catch((err) => console.error("Could not connect to MongoDB...", err));
 
 app.use(express.json()); // This enables parsing of Json objects in the body of requests
-app.use("/api/signup", users);
+app.use("/api/signup", register);
 app.use("/api/auth", auth);
 
 const port = process.env.PORT || 3000;

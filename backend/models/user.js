@@ -7,50 +7,62 @@ It manages relationships between data, provides schema validation, and is
 used to translate between objects in code and the representation of those objects in MongoDB 
 */
 const mongoose = require("mongoose");
+const jwt = require("jsonwebtoken");
 
-const User = mongoose.model(
-    "user",
-    new mongoose.Schema({
-        first_name: {
-            type: String,
-            required: true,
-            minLength: 3,
-            maxLength: 50,
-        },
+const userSchema = new mongoose.Schema({
+    first_name: {
+        type: String,
+        required: true,
+        minLength: 3,
+        maxLength: 50,
+    },
 
-        middle_name: {
-            type: String,
-            default: " ",
-            required: false,
-        },
+    middle_name: {
+        type: String,
+        default: " ",
+        required: false,
+    },
 
-        last_name: {
-            type: String,
-            required: true,
-            minLength: 3,
-            maxLength: 50,
-        },
+    last_name: {
+        type: String,
+        required: true,
+        minLength: 3,
+        maxLength: 50,
+    },
 
-        email: {
-            type: String,
-            required: true,
-            minLength: 5,
-            maxLength: 255,
-            unique: true,
-        },
+    email: {
+        type: String,
+        required: true,
+        minLength: 5,
+        maxLength: 255,
+        unique: true,
+    },
 
-        mobile_number: {
-            type: String,
-            default: "",
-        },
-        password: {
-            type: String,
-            required: true,
-            minLength: 5,
-            maxLength: 1024,
-        },
-    })
-);
+    mobile_number: {
+        type: String,
+        default: "",
+    },
+    password: {
+        type: String,
+        required: true,
+        minLength: 5,
+        maxLength: 1024,
+    },
+    isAdmin: Boolean
+})
+
+userSchema.methods.generateAuthToken = function () { // Can't use arrow function because they don't have "this"
+    const token = jwt.sign({
+        _id: this._id,
+        first_name: this.first_name,
+        last_name: this.last_name,
+        email: this.email,
+        isAdmin: this.isAdmin
+
+    }, "jwtPrivateKey");
+    return token;
+}
+const User = mongoose.model("user", userSchema);
 
 function validateUser(user) {
     const schema = {

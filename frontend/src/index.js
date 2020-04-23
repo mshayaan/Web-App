@@ -11,12 +11,10 @@ import * as serviceWorker from "./serviceWorker";
 
 logger.init();
 
-ReactDOM.render( <
-  BrowserRouter >
+ReactDOM.render( <BrowserRouter >
   <
   App / >
-  <
-  /BrowserRouter>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

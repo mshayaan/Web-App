@@ -3,8 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "react-fontawesome";
 import FontAwesome from "react-fontawesome";
-import Modal from 'react-modal';
-
+import Modal from "react-modal";
 
 class Admin extends Component {
   state = {};
@@ -14,15 +13,15 @@ class Admin extends Component {
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark p-0">
           <div className="container">
             <Link to="index.html" className="navbar-brand">
-              Blogen
+              SafeCity{" "}
             </Link>
-            <Modal
+            <button
               className="navbar-toggler"
               data-toggle="collapse"
               data-target="#navbarCollapse"
             >
               <span className="navbar-toggler-icon"></span>
-            </Modal>
+            </button>
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav">
                 <li className="nav-item px-2">
@@ -281,7 +280,7 @@ class Admin extends Component {
                 <p className="lead text-center">
                   Copyright &copy;
                   <span id="year"></span>
-                  Blogen
+                  SafeCity
                 </p>
               </div>
             </div>
@@ -317,7 +316,11 @@ class Admin extends Component {
                   <div className="form-group">
                     <label for="image">Upload Image</label>
                     <div className="custom-file">
-                      <input type="file" className="custom-file-input" id="image" />
+                      <input
+                        type="file"
+                        className="custom-file-input"
+                        id="image"
+                      />
                       <label for="image" className="custom-file-label">
                         Choose File
                       </label>
@@ -326,7 +329,10 @@ class Admin extends Component {
                   </div>
                   <div className="form-group">
                     <label for="body">Body</label>
-                    <textarea name="editor1" className="form-control"></textarea>
+                    <textarea
+                      name="editor1"
+                      className="form-control"
+                    ></textarea>
                   </div>
                 </form>
               </div>

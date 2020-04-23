@@ -3,6 +3,7 @@ import Joi from "joi-browser";
 import Form from "./common/form";
 import Input from "./common/input";
 import NavBar from "./navbar";
+import axios from "axios";
 
 const apiEndpoint = "http://localhost:3000/api/signup";
 class LoginForm extends Form {

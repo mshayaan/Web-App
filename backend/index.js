@@ -1,9 +1,11 @@
 const config = require("config");
 const register = require("./routes/register");
+const auth = require("./routes/auth");
+const getUsers = require("./routes/getUsers");
+const deleteUser = require("./routes/deleteUser");
 const express = require("express");
 const Joi = require("joi");
 const mongoose = require("mongoose");
-const auth = require("./routes/auth");
 const app = express();
 
 // if (!config.get("jwtPrivateKey")) {
@@ -30,6 +32,8 @@ mongoose
 app.use(express.json()); // This enables parsing of Json objects in the body of requests
 app.use("/api/signup", register);
 app.use("/api/auth", auth);
+app.use("/api/getUsers", getUsers);
+app.use("/api/deleteUser", deleteUser);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

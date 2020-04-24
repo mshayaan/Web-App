@@ -227,8 +227,7 @@ class Admin extends Component {
                   <div className="card-body">
                     <h3>Posts</h3>
                     <h4 className="display-4">
-                      <FontAwesome className="fas fa-pencil-alt"></FontAwesome>{" "}
-                      6
+                      <FontAwesome className="fas fa-pencil"></FontAwesome> 6
                     </h4>
                     <Link
                       to="posts.html"

@@ -82,8 +82,7 @@ class Posts extends Component {
             <div className="row">
               <div className="col-md-6">
                 <h1>
-                  <FontAwesome className="fas fa-pencil-alt"></FontAwesome>{" "}
-                  Posts
+                  <FontAwesome className="fas fa-pencil"></FontAwesome> Posts
                 </h1>
               </div>
             </div>

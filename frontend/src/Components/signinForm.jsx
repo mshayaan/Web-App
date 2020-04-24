@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import http from "../services/httpService";
+import { login } from "../services/authService";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Joi from "joi-browser";
@@ -7,7 +8,6 @@ import Form from "./common/form";
 import Input from "./common/input";
 import config from "../config.json";
 import NavBar from "./navbar";
-import {login} from "../services/authService"
 
 class LoginForm extends Form {
   state = {
@@ -37,7 +37,8 @@ class LoginForm extends Form {
       const { data: jwt } = await login(email, password);
       console.log(jwt);
       localStorage.setItem("token", jwt);
-      this.props.history.push("/");
+      // this.props.history.push("/");
+      window.location = "/";
     } catch (ex) {
       if (ex.response && ex.response.status === 400) {
         const errors = { ...this.state.errors };

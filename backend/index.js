@@ -1,4 +1,3 @@
-const config = require("config");
 const register = require("./routes/register");
 const auth = require("./routes/auth");
 const getUsers = require("./routes/getUsers");
@@ -8,10 +7,7 @@ const Joi = require("joi");
 const mongoose = require("mongoose");
 const app = express();
 
-// if (!config.get("jwtPrivateKey")) {
-//   console.error("FATAL ERROR: jwtPrivateKey is not defined.");
-//   process.exit(1);
-// }
+
 //Connecting with DataBase
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");

@@ -1,19 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {
-  BrowserRouter
-} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
-import logger from './services/logService';
+import logger from "./services/logService";
 import App from "./App";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.js";
 import * as serviceWorker from "./serviceWorker";
 
 logger.init();
 
-ReactDOM.render( <BrowserRouter >
-  <
-  App / >
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
   </BrowserRouter>,
   document.getElementById("root")
 );

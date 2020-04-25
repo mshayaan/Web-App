@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Dropdown from "react-dropdown";
 import { Link } from "react-router-dom";
 
 class NavBar extends Component {
@@ -55,7 +56,7 @@ class NavBar extends Component {
                 Lost and Found
               </Link>
             </li>
-            <li className="nav-item dropdown">
+            {/* <li className="nav-item dropdown">
               <Link
                 className="nav-link dropdown-toggle"
                 to="#"
@@ -84,7 +85,7 @@ class NavBar extends Component {
               <Link className="nav-link disabled" to="#">
                 Disabled
               </Link>
-            </li>
+            </li> */}
           </ul>
           <ul className="navbar-nav justify-content-end ">
             {!user && (
@@ -101,7 +102,7 @@ class NavBar extends Component {
                 </li>
               </React.Fragment>
             )}
-            {user && (
+            {/* {user && (
               <React.Fragment>
                 <li className="nav-item active">
                   <Link className="nav-link" to="/user/profile">
@@ -112,6 +113,34 @@ class NavBar extends Component {
                   <Link className="nav-link" to="/user/logout">
                     Logut
                   </Link>
+                </li>
+              </React.Fragment>
+            )} */}
+            {user && (
+              <React.Fragment>
+                <li className="nav-item dropdown">
+                  <Link
+                    className="nav-link dropdown-toggle"
+                    to="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    {user.first_name} {user.last_name}
+                  </Link>
+                  <div
+                    className="dropdown-menu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <Link className="dropdown-item" to="/user/logout">
+                      Logout
+                    </Link>
+                    <Link className="dropdown-item" to="/user/profile">
+                      My Profile
+                    </Link>
+                  </div>
                 </li>
               </React.Fragment>
             )}

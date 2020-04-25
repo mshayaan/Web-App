@@ -2,6 +2,7 @@ const register = require("./routes/register");
 const auth = require("./routes/auth");
 const getUsers = require("./routes/getUsers");
 const deleteUser = require("./routes/deleteUser");
+const myInfo = require("./routes/myInfo");
 const express = require("express");
 const Joi = require("joi");
 const mongoose = require("mongoose");
@@ -30,6 +31,7 @@ app.use("/api/signup", register);
 app.use("/api/auth", auth);
 app.use("/api/getUsers", getUsers);
 app.use("/api/deleteUser", deleteUser);
+app.use("/api/me", myInfo);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

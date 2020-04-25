@@ -4,9 +4,11 @@ const mongoose = require("mongoose");
 const {
     User
 } = require("../models/user");
+const auth = require("../middleware/auth");
+const isAdmin = require("../middleware/isAdmin");
 
 
-router.get("/", async (req, res) => {
+router.get("/", [auth, isAdmin], async (req, res) => {
     const users = await getUsers();
 
     res.send(users);

@@ -1,10 +1,28 @@
-
 body {
   font-family: "Montserrat";
   text-align: center;
 }
 
-h1, h2, h3, h4, h5, h6 {
+
+.dropdown-menu {
+  background-color: var(--gray);
+  /* border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white; */
+}
+
+.dropdown-item:hover {
+  background-color: #343a40 !important;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Montserrat-Bold";
 }
 
@@ -27,7 +45,7 @@ p {
 
 /* Containers */
 
-.container-fluid{
+.container-fluid {
   padding: 7% 15%;
 }
 
@@ -44,9 +62,9 @@ p {
 
 /* Navigation Bar */
 
-.navbar {
+/* .navbar {
   padding: 0 0 4.5rem;
-}
+} */
 
 .navbar-brand {
   font-family: "Ubuntu";
@@ -115,8 +133,7 @@ p {
 /* Testimonial Section */
 
 #testimonials {
-  background-color: #6556e7
-  ;
+  background-color: #6556e7;
 }
 
 .testimonial-text {

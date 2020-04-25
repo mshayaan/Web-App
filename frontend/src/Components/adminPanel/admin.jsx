@@ -57,18 +57,18 @@ class Admin extends Component {
                     Brad
                   </Link>
                   <div className="dropdown-menu">
-                    <Link to="profile.html" className="dropdown-item">
+                    <Link to="/user/profile" className="dropdown-item">
                       <FontAwesome className="fas fa-user-circle"></FontAwesome>{" "}
                       Profile
                     </Link>
-                    <Link to="settings.html" className="dropdown-item">
+                    <Link to="/user/setting" className="dropdown-item">
                       <FontAwesome className="fas fa-cog"></FontAwesome>{" "}
                       Settings
                     </Link>
                   </div>
                 </li>
                 <li className="nav-item">
-                  <Link to="login.html" className="nav-link">
+                  <Link to="/user/signin" className="nav-link">
                     <FontAwesome className="fas fa-user-times"></FontAwesome>{" "}
                     Logout
                   </Link>
@@ -152,7 +152,7 @@ class Admin extends Component {
                         <td>Web Development</td>
                         <td>May 10 2018</td>
                         <td>
-                          <Link to="details.html" className="btn btn-secondary">
+                          <Link to="/details" className="btn btn-secondary">
                             <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
                             Details
                           </Link>
@@ -164,7 +164,7 @@ class Admin extends Component {
                         <td>Tech Gadgets</td>
                         <td>May 11 2018</td>
                         <td>
-                          <Link to="details.html" className="btn btn-secondary">
+                          <Link to="/details" className="btn btn-secondary">
                             <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
                             Details
                           </Link>
@@ -176,7 +176,7 @@ class Admin extends Component {
                         <td>Web Development</td>
                         <td>May 13 2018</td>
                         <td>
-                          <Link to="details.html" className="btn btn-secondary">
+                          <Link to="/details" className="btn btn-secondary">
                             <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
                             Details
                           </Link>
@@ -188,7 +188,7 @@ class Admin extends Component {
                         <td>Business</td>
                         <td>May 15 2018</td>
                         <td>
-                          <Link to="details.html" className="btn btn-secondary">
+                          <Link to="/details" className="btn btn-secondary">
                             <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
                             Details
                           </Link>
@@ -200,7 +200,7 @@ class Admin extends Component {
                         <td>Web Development</td>
                         <td>May 17 2018</td>
                         <td>
-                          <Link to="details.html" className="btn btn-secondary">
+                          <Link to="/details" className="btn btn-secondary">
                             <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
                             Details
                           </Link>
@@ -212,7 +212,7 @@ class Admin extends Component {
                         <td>Health & Wellness</td>
                         <td>May 20 2018</td>
                         <td>
-                          <Link to="details.html" className="btn btn-secondary">
+                          <Link to="/details" className="btn btn-secondary">
                             <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
                             Details
                           </Link>
@@ -230,7 +230,7 @@ class Admin extends Component {
                       <FontAwesome className="fas fa-pencil"></FontAwesome> 6
                     </h4>
                     <Link
-                      to="posts.html"
+                      to="/admin/posts"
                       className="btn btn-outline-light btn-sm"
                     >
                       View
@@ -245,7 +245,7 @@ class Admin extends Component {
                       <FontAwesome className="fas fa-folder"></FontAwesome> 4
                     </h4>
                     <Link
-                      to="categories.html"
+                      to="/admin/categories"
                       className="btn btn-outline-light btn-sm"
                     >
                       View
@@ -260,7 +260,7 @@ class Admin extends Component {
                       <FontAwesome className="fas fa-users"></FontAwesome> 4
                     </h4>
                     <Link
-                      to="users.html"
+                      to="/admin/users"
                       className="btn btn-outline-light btn-sm"
                     >
                       View

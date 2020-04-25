@@ -14,6 +14,10 @@ import "./css/styles.css";
 import Posts from "./Components/adminPanel/posts";
 import categories from "./Components/adminPanel/categories";
 import Users from "./Components/adminPanel/users";
+import Details from "./Components/adminPanel/details"
+import Profile from "./Components/adminPanel/profile"
+import Settings from "./Components/adminPanel/settings"
+
 
 // Note for Shayan: App.js is upto date, my code an your code was merged successfully
 class App extends Component {
@@ -28,6 +32,11 @@ class App extends Component {
             <Route path="/admin/users" component={Users} />
             <Route path="/admin/posts" component={Posts} />
             <Route path="/admin" component={Admin} />
+            <Route path="/details" component={Details} />
+            <Route path="/user/profile" component={Profile} />
+            <Route path="/user/setting" component={Settings} />
+
+
             <Route path="/user/signup" component={RegistrationForm} />{" "}
             <Route path="/user/signin" component={LoginForm} />{" "}
             <Route path="/user/logout" component={Logout} />{" "}

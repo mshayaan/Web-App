@@ -25,12 +25,12 @@ class NavigationBar extends Component {
             <div className="collapse navbar-collapse" id="navbarCollapse">
               <ul className="navbar-nav">
                 <li className="nav-item px-2">
-                  <Link to="index.html" className="nav-link active">
+                  <Link to="/admin" className="nav-link active">
                     Dashboard
                   </Link>
                 </li>
                 <li className="nav-item px-2">
-                  <Link to="admin/posts" className="nav-link">
+                  <Link to="/admin/posts" className="nav-link">
                     Posts
                   </Link>
                 </li>
@@ -40,7 +40,7 @@ class NavigationBar extends Component {
                   </Link>
                 </li>
                 <li className="nav-item px-2">
-                  <Link to="admin/users" className="nav-link">
+                  <Link to="/admin/users" className="nav-link">
                     Users
                   </Link>
                 </li>

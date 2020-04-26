@@ -17,6 +17,11 @@ import Users from "./Components/adminPanel/users";
 import Details from "./Components/adminPanel/details"
 import Profile from "./Components/adminPanel/profile"
 import Settings from "./Components/adminPanel/settings"
+import cityNews from "./Components/Pages/cityNews";
+import LostAndFound from "./Components/Pages/lostAndFound";
+import ReportCime from "./Components/Pages/reportCrime";
+import ViewSafeZone from "./Components/Pages/viewSafeZone";
+import About from "./Components/Pages/about";
 
 
 // Note for Shayan: App.js is upto date, my code an your code was merged successfully
@@ -28,6 +33,13 @@ class App extends Component {
       <div>
         <div className="content">
           <Switch>
+          <Route path="/citynews" component={cityNews} />{" "}
+          <Route path="/lostandfound" component={LostAndFound} />{" "}
+          <Route path="/reportcrime" component={ReportCime} />{" "}
+          <Route path="/safezones" component={ViewSafeZone} />{" "}
+          <Route path="/about" component={About} />{" "}
+
+
             <Route path="/admin/categories" component={categories} />
             <Route path="/admin/users" component={Users} />
             <Route path="/admin/posts" component={Posts} />
@@ -42,6 +54,8 @@ class App extends Component {
             <Route path="/user/logout" component={Logout} />{" "}
             <Route path="/admin" component={Admin} />{" "}
             <Route path="/" component={Home} />{" "}
+
+
           </Switch>{" "}
         </div>{" "}
       </div>

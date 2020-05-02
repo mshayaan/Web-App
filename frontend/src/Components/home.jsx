@@ -11,6 +11,7 @@ import bizinsider from "../images/bizinsider.png";
 import mashable from "../images/mashable.png";
 import "react-fontawesome";
 import FontAwesome from "react-fontawesome";
+import Footer from "./HomePage/footer";
 
 class Home extends Component {
   state = {};
@@ -243,15 +244,7 @@ class Home extends Component {
           </div>
         </section>
 
-        <footer className="white-section" id="footer">
-          <div className="container-fluid">
-            <FontAwesome className="social-icon fab fa-facebook-f"></FontAwesome>
-            <FontAwesome className="social-icon fab fa-twitter"></FontAwesome>
-            <FontAwesome className="social-icon fab fa-instagram"></FontAwesome>
-            <FontAwesome className="social-icon fas fa-envelope"></FontAwesome>
-            <p>© Copyright 2020 Shayaan</p>
-          </div>
-        </footer>
+        <Footer/>
       </div>
     );
   }

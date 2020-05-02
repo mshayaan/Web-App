@@ -32,27 +32,27 @@ class NavBar extends Component {
             </li>
 
             <li className="nav-item active">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/about">
                 About Us
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/reportcrime">
                 Report a Crime
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/safezones">
                 View Safe Zones
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/citynews">
                 City News
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/lostandfound">
                 Lost and Found
               </Link>
             </li>

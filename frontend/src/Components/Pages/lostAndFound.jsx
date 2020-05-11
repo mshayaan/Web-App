@@ -6,7 +6,8 @@ class LostAndFound extends Component {
   render() {
     return (
       <div>
-        <NavBar></NavBar> <h1>Lost and Found Component</h1>
+        <NavBar></NavBar> 
+        <h1>Lost and Found Component</h1>
       </div>
     );
   }

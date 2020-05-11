@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import FontAwesome from "react-fontawesome";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
-import NavigationBar from "./Components/NavigationBar"
+import NavigationBar from "./Components/NavigationBar";
 
 class details extends Component {
   state = {};
   render() {
     return (
       <div>
-<NavigationBar></NavigationBar>
+        <NavigationBar></NavigationBar>
 
         <header id="main-header" class="py-2 bg-primary text-white">
           <div class="container">
@@ -26,7 +26,8 @@ class details extends Component {
             <div class="row">
               <div class="col-md-3">
                 <a href="index.html" class="btn btn-light btn-block">
-                  <FontAwesome class="fas fa-arrow-left"></FontAwesome> Back To Dashboard
+                  <FontAwesome class="fas fa-arrow-left"></FontAwesome> Back To
+                  Dashboard
                 </a>
               </div>
               <div class="col-md-3">

@@ -15,11 +15,6 @@ export function login(email, password) {
     });
 }
 
-// export function getJwt() {
-//     return localStorage.getItem(token);
-// }
-
-// export default {
-//     login,
-//     getJwt,
-// };
+export function getJwt() {
+    return localStorage.getItem("token");
+}

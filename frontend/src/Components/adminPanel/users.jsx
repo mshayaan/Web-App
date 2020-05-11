@@ -1,15 +1,37 @@
 import React, { Component } from "react";
 import FontAwesome from "react-fontawesome";
+import http from "../../services/httpService";
+import { getUsers } from "../../services/getUsersService";
+import { paginate } from "../../utils/paginate";
+import Pagination from "../common/pagination";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import NavigationBar from "./Components/NavigationBar";
 
 class Users extends Component {
-  state = {};
+  state = {
+    users: [],
+    pageSize: 4,
+    currentPage: 1,
+
+    count: 0,
+  };
+
+  async componentDidMount() {
+    const { data: users } = await getUsers();
+    this.setState({ users });
+  }
+  counter = () => this.state.count + 1;
+
+  handlePageChange = (page) => {
+    this.setState({ currentPage: page });
+  };
   render() {
+    const { pageSize, currentPage, noOfUsers, users: allUsers } = this.state;
+    const users = paginate(allUsers, currentPage, pageSize);
     return (
       <div>
-       <NavigationBar></NavigationBar>
+        <NavigationBar></NavigationBar>
 
         {/* <!-- HEADER --> */}
         <header id="main-header" className="py-2 bg-warning text-white">
@@ -63,41 +85,32 @@ class Users extends Component {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>John Doe</td>
-                        <td>jdoe@gmail.com</td>
-                        <td>
-                          <Link to="details.html" className="btn btn-secondary">
-                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
-                            Details
-                          </Link>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Harry White</td>
-                        <td>harry@yahoo.com</td>
-                        <td>
-                          <Link to="details.html" className="btn btn-secondary">
-                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
-                            Details
-                          </Link>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Mary Johnson</td>
-                        <td>mary@gmail.com</td>
-                        <td>
-                          <Link to="details.html" className="btn btn-secondary">
-                            <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
-                            Details
-                          </Link>
-                        </td>
-                      </tr>
+                      {users.map((user) => (
+                        <tr key={user._id}>
+                          <td></td>
+                          <td>
+                            {user.first_name} {user.last_name}
+                          </td>
+                          <td>{user.email}</td>
+                          <td>
+                            <Link
+                              to="details.html"
+                              className="btn btn-secondary"
+                            >
+                              <FontAwesome className="fas fa-angle-double-right"></FontAwesome>{" "}
+                              Details
+                            </Link>
+                          </td>
+                        </tr>
+                      ))}
                     </tbody>
                   </table>
+                  <Pagination
+                    userCount={allUsers.length}
+                    pageSize={pageSize}
+                    currentPage={currentPage}
+                    onPageChange={this.handlePageChange}
+                  />
                 </div>
               </div>
             </div>

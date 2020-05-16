@@ -11,7 +11,7 @@ import NavigationBar from "./Components/NavigationBar";
 class Users extends Component {
   state = {
     users: [],
-    pageSize: 4,
+    pageSize: 8,
     currentPage: 1,
 
     count: 0,

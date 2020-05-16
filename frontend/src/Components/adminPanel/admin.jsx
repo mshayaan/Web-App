@@ -4,14 +4,25 @@ import { Link } from "react-router-dom";
 import "react-fontawesome";
 import FontAwesome from "react-fontawesome";
 import Modal from "react-modal";
-import NavigationBar from "./Components/NavigationBar"
+import NavigationBar from "./Components/NavigationBar";
 
 class Admin extends Component {
   state = {};
   render() {
+    const { user } = this.props;
+    console.log("Printing user in Admin Component");
+    console.log(user);
+    // console.log(user.isAdmin);
+    console.log("Printed user in Admin Component");
     return (
       <div>
-       <NavigationBar></NavigationBar>
+        {/* {!user && (
+          <div>
+            <h1> You are not admin</h1>
+            <p>You don't have rights to this page</p>
+          </div>
+        )} */}
+        <NavigationBar></NavigationBar>
 
         <header id="main-header" className="py-2 bg-primary text-white">
           <div className="container">
@@ -235,34 +246,34 @@ class Admin extends Component {
               <div className="modal-body">
                 <form>
                   <div className="form-group">
-                    <label for="title">Title</label>
+                    <label htmlFor="title">Title</label>
                     <input type="text" className="form-control" />
                   </div>
                   <div className="form-group">
-                    <label for="category">Category</label>
+                    <label htmlFor="category">Category</label>
                     <select className="form-control">
                       <option value="">Web Development</option>
                       <option value="">Tech Gadgets</option>
                       <option value="">Business</option>
-                      <option value="">Health & Wellness</option>
+                      <option value="">Health Wellness</option>
                     </select>
                   </div>
                   <div className="form-group">
-                    <label for="image">Upload Image</label>
+                    <label htmlFor="image">Upload Image</label>
                     <div className="custom-file">
                       <input
                         type="file"
                         className="custom-file-input"
                         id="image"
                       />
-                      <label for="image" className="custom-file-label">
+                      <label htmlFor="image" className="custom-file-label">
                         Choose File
                       </label>
                     </div>
                     <small className="form-text text-muted">Max Size 3mb</small>
                   </div>
                   <div className="form-group">
-                    <label for="body">Body</label>
+                    <label htmlFor="body">Body</label>
                     <textarea
                       name="editor1"
                       className="form-control"
@@ -293,7 +304,7 @@ class Admin extends Component {
               <div className="modal-body">
                 <form>
                   <div className="form-group">
-                    <label for="title">Title</label>
+                    <label htmlFor="title">Title</label>
                     <input type="text" className="form-control" />
                   </div>
                 </form>
@@ -320,19 +331,19 @@ class Admin extends Component {
               <div className="modal-body">
                 <form>
                   <div className="form-group">
-                    <label for="name">Name</label>
+                    <label htmlFor="name">Name</label>
                     <input type="text" className="form-control" />
                   </div>
                   <div className="form-group">
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" className="form-control" />
                   </div>
                   <div className="form-group">
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" className="form-control" />
                   </div>
                   <div className="form-group">
-                    <label for="password2">Confirm Password</label>
+                    <label htmlFor="password2">Confirm Password</label>
                     <input type="password" className="form-control" />
                   </div>
                 </form>

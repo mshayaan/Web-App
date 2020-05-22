@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import NavBar from "../navbar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./cityNews.css"
 
 class cityNews extends Component {
   state = {};
@@ -7,7 +9,8 @@ class cityNews extends Component {
     return (
       <div>
         <NavBar></NavBar>
-        <h1>City News Component</h1>
+        <link href="css/bootstrap.css" rel="stylesheet"/>
+
         <nav class="navbar navbar-default">
           <div class="container">
             <div class="navbar-header">
@@ -88,7 +91,7 @@ class cityNews extends Component {
                     <div class="row">
                       <div class="col-sm-2">
                         <a class="post-avatar thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                           <div class="text-center">DevUser1</div>
                         </a>
                         <div class="likes text-center">7 Likes</div>
@@ -134,7 +137,7 @@ class cityNews extends Component {
                         <div class="comments">
                           <div class="comment">
                             <a class="comment-avatar pull-left" href="#">
-                              <img src="img/user.png" />
+                              <img src="./img/user.png" />
                             </a>
                             <div class="comment-text">
                               <p>
@@ -147,7 +150,7 @@ class cityNews extends Component {
 
                           <div class="comment">
                             <a class="comment-avatar pull-left" href="#">
-                              <img src="img/user.png" />
+                              <img src="./img/user.png" />
                             </a>
                             <div class="comment-text">
                               <p>
@@ -167,7 +170,7 @@ class cityNews extends Component {
                     <div class="row">
                       <div class="col-sm-2">
                         <a class="post-avatar thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                           <div class="text-center">DevUser2</div>
                         </a>
                         <div class="likes text-center">7 Likes</div>
@@ -210,7 +213,7 @@ class cityNews extends Component {
                         <div class="comments">
                           <div class="comment">
                             <a class="comment-avatar pull-left" href="#">
-                              <img src="img/user.png" />
+                              <img src="./img/user.png" />
                             </a>
                             <div class="comment-text">
                               <p>
@@ -230,7 +233,7 @@ class cityNews extends Component {
                     <div class="row">
                       <div class="col-sm-2">
                         <a class="post-avatar thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                           <div class="text-center">DevUser3</div>
                         </a>
                         <div class="likes text-center">2 Likes</div>
@@ -278,7 +281,7 @@ class cityNews extends Component {
                             <a class="comment-avatar pull-left" href="#">
                               <img src="img/user.png" />
                             </a>
-                            <div class="comment-text">
+                            <div class="./comment-text">
                               <p>
                                 Sed convallis est in ante sodales, sit amet
                                 consectetur leo commodo.
@@ -289,7 +292,7 @@ class cityNews extends Component {
 
                           <div class="comment">
                             <a class="comment-avatar pull-left" href="#">
-                              <img src="img/user.png" />
+                              <img src="./img/user.png" />
                             </a>
                             <div class="comment-text">
                               <p>
@@ -315,62 +318,62 @@ class cityNews extends Component {
                     <ul>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                       <li>
                         <a class="thumbnail" href="profile.html">
-                          <img src="img/user.png" />
+                          <img src="./img/user.png" />
                         </a>
                       </li>
                     </ul>
@@ -395,7 +398,7 @@ class cityNews extends Component {
                     </div>
                     <div class="clearfix"></div>
                     <div class="group-item">
-                      <img src="img/group.png" />
+                      <img src="./img/group.png" />
                       <h4>
                         <a href="#">Sample Group One</a>
                       </h4>
@@ -403,7 +406,7 @@ class cityNews extends Component {
                     </div>
                     <div class="clearfix"></div>
                     <div class="group-item">
-                      <img src="img/group.png" />
+                      <img src="./img/group.png" />
                       <h4>
                         <a href="#">Sample Group One</a>
                       </h4>

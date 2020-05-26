@@ -32,11 +32,6 @@ class NavBar extends Component {
             </li>
 
             <li className="nav-item active">
-              <Link className="nav-link" to="/about">
-                About Us
-              </Link>
-            </li>
-            <li className="nav-item active">
               <Link className="nav-link" to="/reportcrime">
                 Report a Crime
               </Link>
@@ -54,6 +49,11 @@ class NavBar extends Component {
             <li className="nav-item active">
               <Link className="nav-link" to="/lostandfound">
                 Lost and Found
+              </Link>
+            </li>
+            <li className="nav-item active">
+              <Link className="nav-link" to="/about">
+                About Us
               </Link>
             </li>
             {/* <li className="nav-item dropdown">

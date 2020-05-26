@@ -4,6 +4,8 @@ import Form from "./common/form";
 import Input from "./common/input";
 import NavBar from "./navbar";
 import axios from "axios";
+import Footer from "./HomePage/footer";
+
 
 const apiEndpoint = "http://localhost:3000/api/signup";
 class LoginForm extends Form {
@@ -125,6 +127,7 @@ class LoginForm extends Form {
             Login{" "}
           </button>{" "}
         </form>{" "}
+        <Footer/>
       </div>
     );
   }

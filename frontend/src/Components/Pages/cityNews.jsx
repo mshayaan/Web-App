@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import NavBar from "../navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cityNews.css"
+import image from "./img/user.png"
+import Footer from "../HomePage/footer";
+import Posts from "../CityNewsComponents/PostsSubmit"
+
 
 class cityNews extends Component {
   state = {};
@@ -86,154 +90,14 @@ class cityNews extends Component {
                     </form>
                   </div>
                 </div>
+               <Posts></Posts>
+               <Posts></Posts>
                 <div class="panel panel-default post">
                   <div class="panel-body">
                     <div class="row">
                       <div class="col-sm-2">
                         <a class="post-avatar thumbnail" href="profile.html">
-                          <img src="./img/user.png" />
-                          <div class="text-center">DevUser1</div>
-                        </a>
-                        <div class="likes text-center">7 Likes</div>
-                      </div>
-                      {/* <!-- col-sm-2 end --> */}
-                      <div class="col-sm-10">
-                        <div class="bubble">
-                          <div class="pointer">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. In tincidunt eget ante eget feugiat.
-                              Praesent adipiscing tortor eu tincidunt tempus.
-                              Sed convallis est in ante sodales, sit amet
-                              consectetur leo commodo.{" "}
-                            </p>
-                          </div>
-                          <div class="pointer-border"></div>
-                        </div>
-                        {/* <!-- bubble end --> */}
-                        <p class="post-actions">
-                          <a href="#">Comment</a> - <a href="#">Like</a> -{" "}
-                          <a href="#">Follow</a> - <a href="#">Share</a>{" "}
-                        </p>
-                        <div class="comment-form">
-                          <form class="form-inline">
-                            <div class="form-group">
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="exampleInputName2"
-                                placeholder="Enter Comment"
-                              />
-                            </div>
-                            <button type="submit" class="btn btn-default">
-                              Add
-                            </button>
-                          </form>
-                        </div>
-                        {/* <!-- comment form end --> */}
-
-                        <div class="clearfix"></div>
-
-                        <div class="comments">
-                          <div class="comment">
-                            <a class="comment-avatar pull-left" href="#">
-                              <img src="./img/user.png" />
-                            </a>
-                            <div class="comment-text">
-                              <p>
-                                Sed convallis est in ante sodales, sit amet
-                                consectetur leo commodo.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="clearfix"></div>
-
-                          <div class="comment">
-                            <a class="comment-avatar pull-left" href="#">
-                              <img src="./img/user.png" />
-                            </a>
-                            <div class="comment-text">
-                              <p>
-                                Sed convallis est in ante sodales, sit amet
-                                consectetur leo commodo.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="clearfix"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default post">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-sm-2">
-                        <a class="post-avatar thumbnail" href="profile.html">
-                          <img src="./img/user.png" />
-                          <div class="text-center">DevUser2</div>
-                        </a>
-                        <div class="likes text-center">7 Likes</div>
-                      </div>
-                      {/* <!-- col-sm-2 end --> */}
-                      <div class="col-sm-10">
-                        <div class="bubble">
-                          <div class="pointer">
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. In tincidunt eget ante eget feugiat.
-                              Praesent adipiscing tortor eu.{" "}
-                            </p>
-                          </div>
-                          <div class="pointer-border"></div>
-                        </div>
-                        {/* <!-- bubble end --> */}
-                        <p class="post-actions">
-                          <a href="#">Comment</a> - <a href="#">Like</a> -{" "}
-                          <a href="#">Follow</a> - <a href="#">Share</a>{" "}
-                        </p>
-                        <div class="comment-form">
-                          <form class="form-inline">
-                            <div class="form-group">
-                              <input
-                                type="text"
-                                class="form-control"
-                                id="exampleInputName2"
-                                placeholder="Enter Comment"
-                              />
-                            </div>
-                            <button type="submit" class="btn btn-default">
-                              Add
-                            </button>
-                          </form>
-                        </div>
-                        {/* <!-- comment form end --> */}
-                        <div class="clearfix"></div>
-
-                        <div class="comments">
-                          <div class="comment">
-                            <a class="comment-avatar pull-left" href="#">
-                              <img src="./img/user.png" />
-                            </a>
-                            <div class="comment-text">
-                              <p>
-                                Sed convallis est in ante sodales, sit amet
-                                consectetur leo commodo.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="clearfix"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default post">
-                  <div class="panel-body">
-                    <div class="row">
-                      <div class="col-sm-2">
-                        <a class="post-avatar thumbnail" href="profile.html">
-                          <img src="./img/user.png" />
+                          <img src={image} />
                           <div class="text-center">DevUser3</div>
                         </a>
                         <div class="likes text-center">2 Likes</div>
@@ -279,7 +143,7 @@ class cityNews extends Component {
                         <div class="comments">
                           <div class="comment">
                             <a class="comment-avatar pull-left" href="#">
-                              <img src="img/user.png" />
+                              <img src={image} />
                             </a>
                             <div class="./comment-text">
                               <p>
@@ -292,7 +156,7 @@ class cityNews extends Component {
 
                           <div class="comment">
                             <a class="comment-avatar pull-left" href="#">
-                              <img src="./img/user.png" />
+                              <img src={image} />
                             </a>
                             <div class="comment-text">
                               <p>
@@ -309,7 +173,7 @@ class cityNews extends Component {
                 </div>
               </div>
               {/* <!-- col-md-8 end --> */}
-              <div class="col-md-4">
+              {/* <div class="col-md-4">
                 <div class="panel panel-default friends">
                   <div class="panel-heading">
                     <h3 class="panel-title">My Friends</h3>
@@ -418,7 +282,7 @@ class cityNews extends Component {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>

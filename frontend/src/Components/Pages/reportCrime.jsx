@@ -82,34 +82,60 @@ class ReportCime extends Component {
         <div class="wrapper wrapper--w790">
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Event Registration Form</h2>
+                    <h2 class="title">Crime Reporting Form</h2>
                 </div>
                 <div class="card-body">
                     <form method="POST">
-                        <div class="form-row m-b-55">
+                        {/* <div class="form-row m-b-55">
+                          <div class="form-row">
                             <div class="name">Name</div>
                             <div class="value">
-                                <div class="row row-space">
-                                    <div class="col-2">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="first_name"/>
-                                            <label class="label--desc">first name</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-2">
-                                        <div class="input-group-desc">
-                                            <input class="input--style-5" type="text" name="last_name"/>
-                                            <label class="label--desc">last name</label>
-                                        </div>
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="name"/>
+                                </div>
+                            </div>
+                          </div>
+                        </div> */}
+                        <div class="form-row">
+                            <div class="name">Type of Crime</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <div class="rs-select2 js-select-simple select--no-search">
+                                        <select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Snatching</option>
+                                            <option>Murder</option>
+                                            <option>Kidnapping</option>
+                                            <option>Assault</option>
+                                            <option>Rape</option>
+                                            <option>Child Abuse</option>
+                                            <option>Burglary</option>
+                                            <option>Abuse of Power</option>
+                                            <option>Other (Mention details in description)</option>
+
+
+
+
+                                        </select>
+                                        <div class="select-dropdown"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="form-row">
-                            <div class="name">Company</div>
+                            <div class="name">Description</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="company"/>
+                                    <input class="input--style-5" type="text" name="description"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Area of Crime</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="text" name="area-of-crime"/>
                                 </div>
                             </div>
                         </div>
@@ -141,15 +167,14 @@ class ReportCime extends Component {
                             </div>
                         </div>
                         <div class="form-row">
-                            <div class="name">Subject</div>
+                            <div class="name">Were you a victim or witness?</div>
                             <div class="value">
                                 <div class="input-group">
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="subject">
                                             <option disabled="disabled" selected="selected">Choose option</option>
-                                            <option>Subject 1</option>
-                                            <option>Subject 2</option>
-                                            <option>Subject 3</option>
+                                            <option>Victim</option>
+                                            <option>Witness</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -157,7 +182,7 @@ class ReportCime extends Component {
                             </div>
                         </div>
                         <div class="form-row p-t-20">
-                            <label class="label label--block">Are you an existing customer?</label>
+                        <div class="name">Did you report to the police?          </div>
                             <div class="p-t-15">
                                 <label class="radio-container m-r-55">Yes
                                     <input type="radio" checked="checked" name="exist"/>
@@ -170,7 +195,7 @@ class ReportCime extends Component {
                             </div>
                         </div>
                         <div>
-                            <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                            <button class="btn btn--radius-2 btn--red" type="submit">Submit</button>
                         </div>
                     </form>
                 </div>

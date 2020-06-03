@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import NavBar from "../navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./cityNews.css"
-import image from "./img/user.png"
+import "./cityNews.css";
+import image from "./img/user.png";
 import Footer from "../HomePage/footer";
-import Posts from "../CityNewsComponents/PostsSubmit"
-
+import Posts from "../CityNewsComponents/PostsSubmit";
 
 class cityNews extends Component {
   state = {};
@@ -13,7 +12,7 @@ class cityNews extends Component {
     return (
       <div>
         <NavBar></NavBar>
-        <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/bootstrap.css" rel="stylesheet" />
 
         <nav class="navbar navbar-default">
           <div class="container">
@@ -90,8 +89,8 @@ class cityNews extends Component {
                     </form>
                   </div>
                 </div>
-               <Posts></Posts>
-               <Posts></Posts>
+                <Posts></Posts>
+                <Posts></Posts>
                 <div class="panel panel-default post">
                   <div class="panel-body">
                     <div class="row">

@@ -1787,7 +1787,7 @@ a.text-danger:hover {
 }
 
 .bg-primary {
-	color: #fff;
+	color: rgb(230, 48, 214);
 	background-color: #337ab7;
 }
 

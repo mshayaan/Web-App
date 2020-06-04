@@ -8,9 +8,6 @@ import Form from "./common/form";
 import Input from "./common/input";
 import config from "../config.json";
 import NavBar from "./navbar";
-import "./signinForm.css"
-import "bootstrap/dist/css/bootstrap.min.css";
-
 
 class LoginForm extends Form {
   state = {
@@ -55,49 +52,14 @@ class LoginForm extends Form {
     return (
       <div>
         <NavBar />
-
-        {/* Original Code is commented below, remove the other code below to return to original */}
-        {/* <h1> Login </h1>{" "}
+        <h1> Login </h1>{" "}
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("email", "Email")}
 
           {this.renderInput("password", "Password", "password")}
 
           {this.renderButton("Login")}
-        </form>{" "} */}
-
-<div className="limiter">
-		<div className="container-login100">
-			<div className="wrap-login100 p-b-160 p-t-50">
-				<form className="login100-form validate-form">
-					<span className="login100-form-title p-b-43">
-						Account Login
-					</span>
-					
-					<div className="wrap-input100 rs1 validate-input" data-validate = "Username is required">
-						<input className="input100" type="text" name="username"/>
-						<span className="label-input100">Email</span>
-					</div>
-					
-					
-					<div className="wrap-input100 rs2 validate-input" data-validate="Password is required">
-						<input className="input100" type="password" name="pass"/>
-						<span className="label-input100">Password</span>
-					</div>
-
-					<div className="container-login100-form-btn">
-						<button className="login100-form-btn">
-							Sign in
-						</button>
-					</div>
-					
-				
-				</form>
-			</div>
-		</div>
-	</div>
-	
-
+        </form>{" "}
       </div>
     );
   }

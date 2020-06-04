@@ -8,6 +8,7 @@ class ViewSafeZone extends Component {
       <div>
           <NavBar></NavBar>
         <h1>View Safe Zone Component</h1>
+        
       </div>
     );
   }

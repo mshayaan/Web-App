@@ -1,5 +1,9 @@
 const register = require("./routes/register");
 const auth = require("./routes/auth");
+const postWrite = require("./routes/postWrite");
+const getPosts = require("./routes/getPosts");
+const updatePost = require("./routes/updatePost");
+const deletePost = require("./routes/deletePost");
 const getUsers = require("./routes/getUsers");
 const deleteUser = require("./routes/deleteUser");
 const myInfo = require("./routes/myInfo");
@@ -31,7 +35,11 @@ app.use("/api/signup", register);
 app.use("/api/auth", auth);
 app.use("/api/getUsers", getUsers);
 app.use("/api/deleteUser", deleteUser);
-app.use("/api/me", myInfo);
+app.use("/api", myInfo);
+app.use("/api/postWrite", postWrite);
+app.use("/api/getPosts", getPosts);
+app.use("/api/updatePost", updatePost);
+app.use("/api/deletePost", deletePost);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

@@ -14,8 +14,8 @@ router.post('/', auth, async (req, res) => {
     if (error) return res.status(400).send(error.details[0].message);
 
     let post = new Post({
-        userId: req.body.userId, //get this from the token at frontend
-        userName: req.body.userName, //get this from the token at frontend
+        userId: req.user._id,
+        userName: req.user.first_name,
         content: req.body.content, //get this from the content box at frontend
         createdAt: new Date(),
         lastEdited: null,

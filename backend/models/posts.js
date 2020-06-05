@@ -61,28 +61,11 @@ const postSchema = new mongoose.Schema({
 
 })
 
-// postSchema.methods.generateAuthToken = function () { // Can't use arrow function because they don't have "this"
-//     const token = jwt.sign({
-//         _id: this._id,
-//         first_name: this.first_name,
-//         last_name: this.last_name,
-//         email: this.email,
-//         isAdmin: this.isAdmin
-
-//     }, "jwtPrivateKey");
-//     return token;
-// }
 const Post = mongoose.model("post", postSchema);
 
 function validatePost(post) {
     const schema = {
-        userId: Joi.string().min(24).max(24).required(),
-        userName: Joi.string().min(3).max(150).required(),
         content: Joi.string().min(3).max(1000).required(),
-        // type: Joi.string().min(3).max(255).required(),
-        // createdAt: 
-        // lastEdited: 
-        // comments: 
     };
     return Joi.validate(post, schema);
 }

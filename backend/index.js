@@ -4,6 +4,7 @@ const postWrite = require("./routes/postWrite");
 const getPosts = require("./routes/getPosts");
 const updatePost = require("./routes/updatePost");
 const deletePost = require("./routes/deletePost");
+const commentPost = require("./routes/commentPost");
 const getUsers = require("./routes/getUsers");
 const deleteUser = require("./routes/deleteUser");
 const myInfo = require("./routes/myInfo");
@@ -40,6 +41,7 @@ app.use("/api/postWrite", postWrite);
 app.use("/api/getPosts", getPosts);
 app.use("/api/updatePost", updatePost);
 app.use("/api/deletePost", deletePost);
+app.use("/api/commentPost", commentPost);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));

@@ -37,9 +37,9 @@ class NavBar extends Component {
               </Link>
             </li>
             <li className="nav-item active">
-              <Link className="nav-link" to="/safezones">
+              {/* <Link className="nav-link" to="/safezones">
                 View Safe Zones
-              </Link>
+              </Link> */}
             </li>
             <li className="nav-item active">
               <Link className="nav-link" to="/citynews">

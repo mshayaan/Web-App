@@ -1,89 +1,74 @@
-import React, { Component } from 'react'
-import image from "../Pages/img/user.png"
+import React, { Component } from "react";
+import image from "../Pages/img/user.png";
 
- class Posts extends Component {
-     state = {  }
-     render() { 
-         return (  <div class="panel panel-default post">
-         <div class="panel-body">
-           <div class="row">
-             <div class="col-sm-2">
-               <a class="post-avatar thumbnail" href="profile.html">
-                 <img src={image} />
-                 <div class="text-center">DevUser1</div>
-               </a>
-               <div class="likes text-center">7 Likes</div>
-             </div>
-             {/* <!-- col-sm-2 end --> */}
-             <div class="col-sm-10">
-               <div class="bubble">
-                 <div class="pointer">
-                   <p>
-                     Lorem ipsum dolor sit amet, consectetur adipiscing
-                     elit. In tincidunt eget ante eget feugiat.
-                     Praesent adipiscing tortor eu tincidunt tempus.
-                     Sed convallis est in ante sodales, sit amet
-                     consectetur leo commodo.{" "}
-                   </p>
-                 </div>
-                 <div class="pointer-border"></div>
-               </div>
-               {/* <!-- bubble end --> */}
-               <p class="post-actions">
-                 <a href="#">Comment</a> - <a href="#">Like</a> -{" "}
-                 <a href="#">Follow</a> - <a href="#">Share</a>{" "}
-               </p>
-               <div class="comment-form">
-                 <form class="form-inline">
-                   <div class="form-group">
-                     <input
-                       type="text"
-                       class="form-control"
-                       id="exampleInputName2"
-                       placeholder="Enter Comment"
-                     />
-                   </div>
-                   <button type="submit" class="btn btn-default">
-                     Add
-                   </button>
-                 </form>
-               </div>
-               {/* <!-- comment form end --> */}
+class Post extends Component {
+  state = {};
 
-               <div class="clearfix"></div>
+  render() {
+    const { content, comments, userName, onAdd } = this.props;
+    return (
+      <div className="panel panel-default post">
+        <div className="panel-body">
+          <div className="row">
+            <div className="col-sm-2">
+              <a className="post-avatar thumbnail" href="profile.html">
+                <img src={image} />
+                <div className="text-center">{userName}</div>
+              </a>
+              <div className="likes text-center">7 Likes</div>
+            </div>
+            {/* <!-- col-sm-2 end --> */}
+            <div className="col-sm-10">
+              <div className="bubble">
+                <div className="pointer">
+                  <p>{content}</p>
+                </div>
+                <div className="pointer-border"></div>
+              </div>
+              {/* <!-- bubble end --> */}
+              <p className="post-actions">
+                <a href="#">Comment</a> - <a href="#">Like</a> -{" "}
+                <a href="#">Follow</a> - <a href="#">Share</a>{" "}
+              </p>
+              <div className="comment-form">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="exampleInputName2"
+                    placeholder="Enter Comment"
+                  />
+                </div>
+                <button onClick={onAdd} className="btn btn-default">
+                  Add
+                </button>
+              </div>
+              {/* <!-- comment form end --> */}
 
-               <div class="comments">
-                 <div class="comment">
-                   <a class="comment-avatar pull-left" href="#">
-                     <img src={image} />
-                   </a>
-                   <div class="comment-text">
-                     <p>
-                       Sed convallis est in ante sodales, sit amet
-                       consectetur leo commodo.
-                     </p>
-                   </div>
-                 </div>
-                 <div class="clearfix"></div>
+              <div className="clearfix"></div>
 
-                 <div class="comment">
-                   <a class="comment-avatar pull-left" href="#">
-                     <img src={image} />
-                   </a>
-                   <div class="comment-text">
-                     <p>
-                       Sed convallis est in ante sodales, sit amet
-                       consectetur leo commodo.
-                     </p>
-                   </div>
-                 </div>
-                 <div class="clearfix"></div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div> );
-     }
- }
-  
- export default Posts;
+              <div className="comments">
+                {comments.map((comment) => (
+                  <div key={comment._id}>
+                    <div className="comment">
+                      <a className="comment-avatar pull-left" href="#">
+                        <img src={image} />
+                        <div className="text-center">{comment.userName}</div>
+                      </a>
+                      <div className="comment-text">
+                        <p>{comment.content}</p>
+                      </div>
+                    </div>
+                    <div className="clearfix"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Post;

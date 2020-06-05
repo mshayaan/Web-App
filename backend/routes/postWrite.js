@@ -20,7 +20,7 @@ router.post('/', auth, async (req, res) => {
         createdAt: new Date(),
         lastEdited: null,
         comments: [],
-        approved: false
+        approved: true
     });
 
     await post.save();

@@ -1,11 +1,39 @@
 import React, { Component } from "react";
 import image from "../Pages/img/user.png";
+import { addComment } from "../../services/addCommentService";
 
 class Post extends Component {
-  state = {};
+  state = {
+    data: {
+      comment: "",
+    },
+  };
+
+  handleChange = (e) => {
+    const data = { ...this.state.data };
+    data.comment = e.currentTarget.value;
+    this.setState({ data });
+  };
+
+  onAdd = async (postId) => {
+    // console.log("Trying to add comment");
+
+    const { comment } = this.state.data;
+    // console.log(comment);
+    try {
+      console.log("Trying to call comment Service");
+      const { data: post } = await addComment(comment, postId);
+
+      console.log("About to set state");
+      // console.log(post);
+      this.setState({ data: { comment: "" } });
+    } catch (ex) {
+      console.log("Error");
+    }
+  };
 
   render() {
-    const { content, comments, userName, onAdd } = this.props;
+    const { content, comments, userName, postId } = this.props;
     return (
       <div className="panel panel-default post">
         <div className="panel-body">
@@ -34,12 +62,17 @@ class Post extends Component {
                 <div className="form-group">
                   <input
                     type="text"
+                    value={this.state.data.comment}
+                    onChange={this.handleChange}
                     className="form-control"
                     id="exampleInputName2"
                     placeholder="Enter Comment"
                   />
                 </div>
-                <button onClick={onAdd} className="btn btn-default">
+                <button
+                  onClick={() => this.onAdd(postId)}
+                  className="btn btn-default"
+                >
                   Add
                 </button>
               </div>

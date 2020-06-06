@@ -6,6 +6,7 @@ import { submitPost } from "../../services/submitPostService";
 import image from "./img/user.png";
 import Footer from "../HomePage/footer";
 import { getPosts } from "../../services/getPostsService";
+
 import Post from "../CityNewsComponents/PostsSubmit";
 
 class cityNews extends Component {
@@ -32,17 +33,11 @@ class cityNews extends Component {
       const { data: posts } = await getPosts();
       const data = { content: "" };
       this.setState({ posts });
-      console.log(this.state.posts);
+      // console.log(this.state.posts);
     } catch (ex) {
       console.log("Exception occured");
     }
   }
-
-  onAdd = () => {
-    console.log("Trying to add comment");
-    // const currentPage = this.state.currentPage - 1;
-    // this.setState({ currentPage });
-  };
 
   onSubmit = async () => {
     console.log("Submit Clicked");
@@ -55,11 +50,6 @@ class cityNews extends Component {
       this.setState({ data: { content: "" } });
     } catch (ex) {
       console.log("Error");
-      if (ex.response && ex.response.status === 400) {
-        const errors = { ...this.state.errors };
-        errors.email = ex.response.data;
-        this.setState({ errors });
-      }
     }
   };
 
@@ -106,7 +96,7 @@ class cityNews extends Component {
                     content={post.content}
                     comments={post.comments}
                     userName={post.userName}
-                    onAdd={this.onAdd}
+                    postId={post._id}
                   />
                 ))}
               </div>

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NavBar from "../navbar";
+import jwtDecode from "jwt-decode";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./cityNews.css";
 import { submitPost } from "../../services/submitPostService";
@@ -21,7 +22,10 @@ class cityNews extends Component {
   async componentDidMount() {
     try {
       const { data: posts } = await getPosts();
-      this.setState({ posts });
+      const jwt = localStorage.getItem("token");
+      const user = jwtDecode(jwt);
+
+      this.setState({ posts, user });
       console.log(this.state.posts);
     } catch (ex) {
       console.log("Exception occured");
@@ -63,7 +67,7 @@ class cityNews extends Component {
     const { posts } = this.state;
     return (
       <div>
-        <NavBar></NavBar>
+        <NavBar user={this.state.user} />
         <link href="css/bootstrap.css" rel="stylesheet" />
 
         <section>

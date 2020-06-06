@@ -43,7 +43,9 @@ class Post extends Component {
                 <img src={image} />
                 <div className="text-center">{userName}</div>
               </a>
-              <div className="likes text-center">7 Likes</div>
+              <div className="likes text-center">Date: <br></br> 6/6/2020</div><hr></hr>
+              <div className="likes text-center">Last edit: <br></br> 6/6/2020</div>
+
             </div>
             {/* <!-- col-sm-2 end --> */}
             <div className="col-sm-10">
@@ -55,8 +57,7 @@ class Post extends Component {
               </div>
               {/* <!-- bubble end --> */}
               <p className="post-actions">
-                <a href="#">Comment</a> - <a href="#">Like</a> -{" "}
-                <a href="#">Follow</a> - <a href="#">Share</a>{" "}
+                <a href="#">Comment</a> --- <a href="#">Delete Post</a>{" "}
               </p>
               <div className="comment-form">
                 <div className="form-group">

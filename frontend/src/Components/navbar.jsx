@@ -46,11 +46,11 @@ class NavBar extends Component {
                 City News
               </Link>
             </li>
-            <li className="nav-item active">
+            {/* <li className="nav-item active">
               <Link className="nav-link" to="/lostandfound">
                 Lost and Found
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item active">
               <Link className="nav-link" to="/about">
                 About Us

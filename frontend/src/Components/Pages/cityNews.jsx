@@ -101,6 +101,8 @@ class cityNews extends Component {
                     comments={post.comments}
                     userName={post.userName}
                     postId={post._id}
+                    createdAt={post.createdAt}
+                    lastEdited={post.lastEdited}
                   />
                 ))}
               </div>

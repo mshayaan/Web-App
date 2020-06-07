@@ -33,7 +33,14 @@ class Post extends Component {
   };
 
   render() {
-    const { content, comments, userName, postId } = this.props;
+    const {
+      content,
+      comments,
+      userName,
+      postId,
+      createdAt,
+      lastEdited,
+    } = this.props;
     return (
       <div className="panel panel-default post">
         <div className="panel-body">
@@ -43,9 +50,17 @@ class Post extends Component {
                 <img src={image} />
                 <div className="text-center">{userName}</div>
               </a>
-              <div className="likes text-center">Date: <br></br> 6/6/2020</div><hr></hr>
-              <div className="likes text-center">Last edit: <br></br> 6/6/2020</div>
-
+              <div className="likes text-center">
+                Date: <br></br>
+                {createdAt}
+              </div>
+              <hr></hr>
+              {lastEdited && (
+                <div className="likes text-center">
+                  Last edit: <br></br>
+                  {lastEdited}
+                </div>
+              )}
             </div>
             {/* <!-- col-sm-2 end --> */}
             <div className="col-sm-10">

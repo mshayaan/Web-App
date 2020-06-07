@@ -1,19 +1,30 @@
 import React, { Component } from "react";
 import NavBar from "../navbar.jsx";
 import "./about.css";
+import jwtDecode from "jwt-decode";
 import Footer from "../HomePage/footer";
-import shahzaib from "./img/shahzaib.jpg"
-import shayaan from "./img/shayaan.jpg"
-import mark from "./img/mark.jpg"
-import sundar from "./img/sundar.jpg"
-import company from "./img/company.jpg"
+import shahzaib from "./img/shahzaib.jpg";
+import shayaan from "./img/shayaan.jpg";
+import mark from "./img/mark.jpg";
+import sundar from "./img/sundar.jpg";
+import company from "./img/company.jpg";
 
 class About extends Component {
   state = {};
+
+  componentDidMount() {
+    try {
+      const jwt = localStorage.getItem("token");
+      const user = jwtDecode(jwt);
+      this.setState({
+        user,
+      });
+    } catch (ex) {}
+  }
   render() {
     return (
       <div>
-        <NavBar></NavBar>
+        <NavBar user={this.state.user} />
         <div id="page">
           <section
             id="home"
@@ -47,8 +58,8 @@ class About extends Component {
                     class="video colorlib-video"
                     // style="background-image: url(images/about.jpg);"
                   >
-                   <img class="popup-vimeo" src={company} alt=""/>
-                   
+                    <img class="popup-vimeo" src={company} alt="" />
+
                     <div class="overlay"></div>
                   </div>
                 </div>
@@ -65,7 +76,6 @@ class About extends Component {
                     tincidunt ligula. Morbi a ultrices libero. Nunc non finibus
                     dolor, sit amet maximus diam.
                   </p>
-                
                 </div>
               </div>
               <div class="row">
@@ -82,8 +92,7 @@ class About extends Component {
               <div class="row">
                 <div class="col-md-3 text-center animate-box">
                   <div class="staff-entry">
-                    
-                    <img src={shayaan} class="staff-img" alt=""/>
+                    <img src={shayaan} class="staff-img" alt="" />
                     <div class="desc">
                       <h3>Muhammad Shayaan</h3>
                       <span>Developer</span>
@@ -120,8 +129,7 @@ class About extends Component {
                 </div>
                 <div class="col-md-3 text-center animate-box">
                   <div class="staff-entry">
-                  
-                  <img src={shahzaib} class="staff-img" alt=""/>
+                    <img src={shahzaib} class="staff-img" alt="" />
 
                     <div class="desc">
                       <h3>Shahzaib Saleem</h3>
@@ -159,7 +167,7 @@ class About extends Component {
                 </div>
                 <div class="col-md-3 text-center animate-box">
                   <div class="staff-entry">
-                  <img src={mark} class="staff-img" alt=""/>
+                    <img src={mark} class="staff-img" alt="" />
 
                     <div class="desc">
                       <h3>Mark Zuckerberg</h3>
@@ -197,7 +205,7 @@ class About extends Component {
                 </div>
                 <div class="col-md-3 text-center animate-box">
                   <div class="staff-entry">
-                  <img src={sundar} class="staff-img" alt=""/>
+                    <img src={sundar} class="staff-img" alt="" />
 
                     <div class="desc">
                       <h3>Sundar Pichai</h3>

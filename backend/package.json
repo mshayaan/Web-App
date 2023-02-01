@@ -16,6 +16,6 @@
     "joi": "^14.3.1",
     "joi-password-complexity": "^4.1.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.5"
+    "mongoose": "^5.13.15"
   }
 }
